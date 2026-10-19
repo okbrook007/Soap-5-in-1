@@ -1,160 +1,515 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>5 in 1 Shampoo Store</title>
-
-    <link rel="stylesheet" href="test.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Discover the 5-in-1 cleaning and personal-care concept from TNH."
+  />
+  <title>TNH 5-in-1 | Everyday Care, Reimagined</title>
+  <link rel="stylesheet" href="presentation_week9.css" />
+  <script src="presentation_week9.js" defer></script>
 </head>
-
 <body>
+  <!-- Announcement bar -->
+  <div class="announcement">
+    <p>MEET THE TNH 5-IN-1 CONCEPT — SIMPLE IDEAS, SMARTER ROUTINES</p>
+  </div>
 
-   
-    <nav>
-        <h2>🧴 TraNhaHout (TNH)</h2>
+  <!-- Navigation -->
+  <header class="site-header">
+    <a class="logo" href="#home" aria-label="TNH home">
+      <span class="logo-mark">T</span>
+      <span>TNH<span class="logo-light">.care</span></span>
+    </a>
 
-        <div class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#uses">Uses</a>
-            <a href="#product">Product</a>
-            <button onclick="openCart()">🛒 Cart (<span id="cartCount">0</span>)</button>
-        </div>
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="mainNav"
+    >
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#home">Home</a>
+      <a href="#uses">5-in-1 Concept</a>
+      <a href="#benefits">Benefits</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQ</a>
     </nav>
 
+    <button class="cart-button" id="openCart" aria-label="Open shopping cart">
+      <span>Bag</span>
+      <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </header>
 
+  <main>
+    <!-- Hero -->
+    <section class="hero section" id="home">
+      <div class="hero-copy">
+        <span class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          A NEW WAY TO THINK ABOUT DAILY CARE
+        </span>
 
-    <section id="home" class="hero">
+        <h1>
+          One idea.<br />
+          <span>Five everyday</span><br />
+          essentials.
+        </h1>
 
-        <div class="hero-text">
-            <h1>5 in 1 Shampoo</h1>
+        <p class="hero-description">
+          Meet the TNH 5-in-1 concept — a fresh approach to everyday
+          cleaning and personal care, designed around simplicity,
+          thoughtful choices, and less clutter.
+        </p>
 
-            <p>
-                One bottle. Five different cleaning uses.
-            </p>
-
-            <h2>$6.70</h2>
-
-            <button class="buy-button" onclick="addToCart()">
-                Buy Now
-            </button>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#uses">
+            Explore the concept <span aria-hidden="true">↗</span>
+          </a>
+          <a class="text-link" href="#story">Discover our story</a>
         </div>
 
-        <div class="product-picture">
-            🧴
+        <div class="hero-proof">
+          <div class="proof-icon">✳</div>
+          <div>
+            <strong>Thoughtfully designed</strong>
+            <p>One concept. Five distinct use cases.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="visual-glow"></div>
+        <div class="floating-label label-top">
+          <span class="label-dot"></span>
+          Everyday essentials
         </div>
 
+        <div class="product-stage">
+          <div class="stage-shadow"></div>
+          <div class="bottle">
+            <div class="bottle-cap"></div>
+            <div class="bottle-neck"></div>
+            <div class="bottle-body">
+              <div class="bottle-brand">TNH</div>
+              <div class="bottle-line"></div>
+              <div class="bottle-title">5 IN 1</div>
+              <div class="bottle-subtitle">DAILY CARE CONCEPT</div>
+              <div class="bottle-leaf">✳</div>
+              <div class="bottle-volume">DESIGNED FOR EVERYDAY LIFE</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="floating-label label-bottom">
+          <span class="label-sparkle">✦</span>
+          Simple by design
+        </div>
+        <div class="hero-number">01 / 05</div>
+      </div>
     </section>
 
-
-
-    <section id="uses">
-
-        <h2 class="section-title">5 Uses in 1 Product</h2>
-
-        <div class="uses-container">
-
-            <div class="use-card">
-                <div class="icon">💇</div>
-                <h3>Hair</h3>
-                <p>For washing hair.</p>
-            </div>
-
-            <div class="use-card">
-                <div class="icon">🚿</div>
-                <h3>Body</h3>
-                <p>For washing the body.</p>
-            </div>
-
-            <div class="use-card">
-                <div class="icon">🦷</div>
-                <h3>Teeth</h3>
-                <p>For teeth cleaning.</p>
-            </div>
-
-            <div class="use-card">
-                <div class="icon">👕</div>
-                <h3>Clothes</h3>
-                <p>For washing clothes.</p>
-            </div>
-
-            <div class="use-card">
-                <div class="icon">🍽️</div>
-                <h3>Dishes</h3>
-                <p>For washing dishes.</p>
-            </div>
-
-        </div>
-
+    <!-- Marquee -->
+    <section class="ticker" aria-label="Product concept highlights">
+      <div class="ticker-track">
+        <span>LESS CLUTTER</span><i>✳</i>
+        <span>SMARTER ROUTINES</span><i>✳</i>
+        <span>THOUGHTFUL DESIGN</span><i>✳</i>
+        <span>EVERYDAY ESSENTIALS</span><i>✳</i>
+        <span>LESS CLUTTER</span><i>✳</i>
+        <span>SMARTER ROUTINES</span><i>✳</i>
+      </div>
     </section>
 
-
-  
-    <section id="product" class="product-section">
-
-        <h2>Our Product</h2>
-
-        <div class="product-box">
-
-            <div class="big-bottle">
-                🧴
-            </div>
-
-            <div class="product-info">
-
-                <h1>TNH 5-in-1 Shampoo</h1>
-
-                <p>
-                    The ultimate 5-in-1 cleaning solution.
-                </p>
-
-                <h2>$6.70</h2>
-
-                <button class="buy-button" onclick="addToCart()">
-                    Add to Cart
-                </button>
-
-            </div>
-
+    <!-- Five uses -->
+    <section class="section uses-section" id="uses">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">THE 5-IN-1 IDEA</span>
+          <h2>Five needs.<br /><span>One big idea.</span></h2>
         </div>
+        <p>
+          Explore the five categories behind our concept. Each category
+          requires a suitable, separately tested formulation.
+        </p>
+      </div>
 
+      <div class="uses-grid">
+        <article class="use-card use-laundry">
+          <div class="use-card-top">
+            <span class="use-number">01</span>
+            <span class="use-icon" aria-hidden="true">◌</span>
+          </div>
+          <div class="use-illustration laundry-art" aria-hidden="true">
+            <div class="fabric fabric-one"></div>
+            <div class="fabric fabric-two"></div>
+            <div class="fabric fabric-three"></div>
+          </div>
+          <h3>Clothes</h3>
+          <p>A laundry-care category for fresh, clean everyday fabrics.</p>
+          <span class="use-tag">Laundry care</span>
+        </article>
+
+        <article class="use-card use-body">
+          <div class="use-card-top">
+            <span class="use-number">02</span>
+            <span class="use-icon" aria-hidden="true">✳</span>
+          </div>
+          <div class="use-illustration body-art" aria-hidden="true">
+            <div class="art-orb"></div>
+            <div class="art-drop"></div>
+            <div class="art-drop drop-two"></div>
+          </div>
+          <h3>Body</h3>
+          <p>A body-wash category designed for a comfortable shower routine.</p>
+          <span class="use-tag">Body care</span>
+        </article>
+
+        <article class="use-card use-hair">
+          <div class="use-card-top">
+            <span class="use-number">03</span>
+            <span class="use-icon" aria-hidden="true">〰</span>
+          </div>
+          <div class="use-illustration hair-art" aria-hidden="true">
+            <div class="hair-strand strand-one"></div>
+            <div class="hair-strand strand-two"></div>
+            <div class="hair-strand strand-three"></div>
+          </div>
+          <h3>Hair</h3>
+          <p>A shampoo category focused on a simple hair-care routine.</p>
+          <span class="use-tag">Hair care</span>
+        </article>
+
+        <article class="use-card use-teeth">
+          <div class="use-card-top">
+            <span class="use-number">04</span>
+            <span class="use-icon" aria-hidden="true">＋</span>
+          </div>
+          <div class="use-illustration teeth-art" aria-hidden="true">
+            <div class="tooth-shape">✦</div>
+            <div class="tooth-spark spark-one">✧</div>
+            <div class="tooth-spark spark-two">✧</div>
+          </div>
+          <h3>Teeth</h3>
+          <p>An oral-care category requiring a suitable toothpaste formulation.</p>
+          <span class="use-tag">Oral care</span>
+        </article>
+
+        <article class="use-card use-face">
+          <div class="use-card-top">
+            <span class="use-number">05</span>
+            <span class="use-icon" aria-hidden="true">♡</span>
+          </div>
+          <div class="use-illustration face-art" aria-hidden="true">
+            <div class="face-disc">
+              <span class="face-eye eye-left"></span>
+              <span class="face-eye eye-right"></span>
+              <span class="face-smile"></span>
+            </div>
+          </div>
+          <h3>Face</h3>
+          <p>A facial-cleanser category for a gentle daily skincare routine.</p>
+          <span class="use-tag">Face care</span>
+        </article>
+      </div>
+
+      <p class="safety-note">
+        <strong>Safety first:</strong> These are five product categories,
+        not a recommendation to use one ordinary shampoo or detergent for
+        all five purposes. Never use laundry detergent on your body, face,
+        hair, or teeth. Oral and skin products need appropriate formulations
+        and safety testing.
+      </p>
     </section>
 
+    <!-- Story -->
+    <section class="story-section section" id="story">
+      <div class="story-visual">
+        <div class="story-circle circle-large"></div>
+        <div class="story-circle circle-small"></div>
+        <div class="story-symbol">T<span>✳</span></div>
+        <div class="story-caption">LESS, BUT BETTER.</div>
+      </div>
 
-    <div id="cartBox" class="popup">
+      <div class="story-copy">
+        <span class="eyebrow">WHY TNH?</span>
+        <h2>Designed around<br />real <span>everyday life.</span></h2>
+        <p>
+          Daily routines can become complicated. TNH explores how clear
+          design, useful information, and thoughtful product planning can
+          make everyday choices easier.
+        </p>
+        <p>
+          Our concept starts with a simple question: how can everyday
+          essentials be easier to understand, choose, and organize?
+        </p>
+        <a href="#benefits" class="button button-outline">
+          See what matters to us <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </section>
 
-        <div class="popup-content">
+    <!-- Benefits -->
+    <section class="benefits-section section" id="benefits">
+      <div class="section-heading centered-heading">
+        <span class="eyebrow">OUR DESIGN PRINCIPLES</span>
+        <h2>Good design goes<br /><span>beyond the bottle.</span></h2>
+        <p>We focus on making the product concept clear, useful, and easy to explore.</p>
+      </div>
 
-            <span class="close" onclick="closeCart()">×</span>
+      <div class="benefits-grid">
+        <article class="benefit">
+          <div class="benefit-icon">⌘</div>
+          <h3>Simple choices</h3>
+          <p>Clear labels and straightforward information help people understand what they are choosing.</p>
+        </article>
+        <article class="benefit">
+          <div class="benefit-icon">◎</div>
+          <h3>Purposeful design</h3>
+          <p>A clean visual identity puts useful product information front and center.</p>
+        </article>
+        <article class="benefit">
+          <div class="benefit-icon">✳</div>
+          <h3>Safety matters</h3>
+          <p>Every real product needs a formulation and label appropriate to its intended use.</p>
+        </article>
+      </div>
+    </section>
 
-            <h2>🛒 Your Cart</h2>
+    <!-- Featured product -->
+    <section class="featured-section section" id="product">
+      <div class="featured-visual">
+        <div class="featured-orbit orbit-one"></div>
+        <div class="featured-orbit orbit-two"></div>
+        <div class="mini-bottle">
+          <div class="mini-cap"></div>
+          <div class="mini-body">
+            <strong>TNH</strong>
+            <span>5 IN 1</span>
+            <small>CONCEPT</small>
+            <b>✳</b>
+          </div>
+        </div>
+        <span class="featured-sticker">A FRESH<br />IDEA ✦</span>
+      </div>
 
-            <div id="cartItems">
-                Your cart is empty.
-            </div>
+      <div class="featured-copy">
+        <span class="eyebrow">THE CONCEPT COLLECTION</span>
+        <h2>Meet the idea<br />behind <span>TNH 5-in-1.</span></h2>
+        <p>
+          A concept product for a more considered everyday-care experience.
+          Explore the design, learn about the five categories, and tell us
+          what you would like to see next.
+        </p>
 
-            <h3>
-                Total: $<span id="total">0.00</span>
-            </h3>
-
-            <button class="checkout-button" onclick="checkout()">
-                Checkout
-            </button>
-
+        <div class="product-meta">
+          <div>
+            <span class="meta-label">Product type</span>
+            <strong>Concept demonstration</strong>
+          </div>
+          <div>
+            <span class="meta-label">Collection</span>
+            <strong>Everyday essentials</strong>
+          </div>
         </div>
 
+        <div class="product-purchase">
+          <div class="product-price">
+            <span class="price-value">$12.00</span>
+            <span class="price-note">Demo price only</span>
+          </div>
+          <button class="button button-dark" id="addToCart">
+            Add concept to bag <span aria-hidden="true">＋</span>
+          </button>
+        </div>
+        <p class="demo-disclaimer">
+          This is a front-end demonstration. No real product is sold,
+          no payment is collected, and the displayed price is illustrative.
+        </p>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="reviews-section section" id="reviews">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">COMMUNITY FEEDBACK</span>
+          <h2>Ideas are better<br /><span>when shared.</span></h2>
+        </div>
+        <p>Example feedback cards for a student website project. These are not verified customer testimonials.</p>
+      </div>
+
+      <div class="reviews-grid">
+        <article class="review-card">
+          <div class="review-stars" aria-label="Five decorative stars">★★★★★</div>
+          <blockquote>
+            “I like how the website explains the concept in a simple,
+            organized way.”
+          </blockquote>
+          <div class="review-person">
+            <div class="avatar avatar-one">A</div>
+            <div><strong>Alex M.</strong><span>Sample reviewer</span></div>
+          </div>
+        </article>
+        <article class="review-card">
+          <div class="review-stars" aria-label="Five decorative stars">★★★★★</div>
+          <blockquote>
+            “The clean layout makes it easy to explore each category
+            and understand the idea.”
+          </blockquote>
+          <div class="review-person">
+            <div class="avatar avatar-two">J</div>
+            <div><strong>Jamie R.</strong><span>Sample reviewer</span></div>
+          </div>
+        </article>
+        <article class="review-card">
+          <div class="review-stars" aria-label="Five decorative stars">★★★★★</div>
+          <blockquote>
+            “The safety note is important because different products
+            need different formulas.”
+          </blockquote>
+          <div class="review-person">
+            <div class="avatar avatar-three">S</div>
+            <div><strong>Sam K.</strong><span>Sample reviewer</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section section" id="faq">
+      <div class="faq-intro">
+        <span class="eyebrow">NEED TO KNOW</span>
+        <h2>Frequently<br /><span>asked questions.</span></h2>
+        <p>Learn more about the website concept and how the demo works.</p>
+      </div>
+
+      <div class="faq-list">
+        <article class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Is this a real product available to buy?
+            <span class="faq-plus" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>No. This website is a front-end concept demonstration for a project. The product, price, cart, and reviews are illustrative only.</p>
+          </div>
+        </article>
+
+        <article class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Can one formula safely be used for all five purposes?
+            <span class="faq-plus" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Do not assume that it can. Laundry products, shampoos, facial cleansers, body washes, and toothpaste have different requirements. Each intended use needs an appropriate, tested formulation. Never put ordinary shampoo or detergent on your teeth.</p>
+          </div>
+        </article>
+
+        <article class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Does the shopping cart process payments?
+            <span class="faq-plus" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>No. The cart is a JavaScript demonstration. It does not collect payment details, send orders, or connect to a payment provider.</p>
+          </div>
+        </article>
+
+        <article class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Can I customize the colors and product details?
+            <span class="faq-plus" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. Edit the text in this HTML file, change the colors in style.css, and adjust the cart or interaction logic in app.js.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter-section">
+      <div>
+        <span class="eyebrow">STAY IN THE LOOP</span>
+        <h2>Good ideas start<br />with a conversation.</h2>
+        <p>Join our demo mailing list to see how the signup interaction works.</p>
+      </div>
+      <form class="newsletter-form" id="newsletterForm">
+        <label for="emailInput" class="visually-hidden">Email address</label>
+        <input
+          type="email"
+          id="emailInput"
+          placeholder="Enter your email address"
+          autocomplete="email"
+          required
+        />
+        <button type="submit" aria-label="Submit email">Join <span>↗</span></button>
+        <p class="form-message" id="formMessage" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <a class="logo footer-logo" href="#home">
+        <span class="logo-mark">T</span>
+        <span>TNH<span class="logo-light">.care</span></span>
+      </a>
+      <p>A concept built around thoughtful everyday essentials.</p>
+      <a href="#home" class="back-to-top">Back to top ↑</a>
     </div>
+    <div class="footer-bottom">
+      <span>© <span id="currentYear"></span> TNH Concept Studio</span>
+      <span>Student website demonstration · Not a real product offer</span>
+    </div>
+  </footer>
 
+  <!-- Cart drawer -->
+  <div class="cart-overlay" id="cartOverlay" hidden></div>
+  <aside
+    class="cart-drawer"
+    id="cartDrawer"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="cartTitle"
+    aria-hidden="true"
+  >
+    <div class="cart-header">
+      <div>
+        <span class="eyebrow">YOUR SELECTION</span>
+        <h2 id="cartTitle">Your bag <span id="cartItemLabel">(0)</span></h2>
+      </div>
+      <button class="close-cart" id="closeCart" aria-label="Close shopping cart">×</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="empty-cart">
+        <span>✳</span>
+        <h3>Your bag is empty</h3>
+        <p>Add the concept product to see how the cart works.</p>
+      </div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Demo subtotal</span>
+        <strong id="cartTotal">$0.00</strong>
+      </div>
+      <button class="button button-dark checkout-button" id="demoCheckout">
+        Demo checkout <span>↗</span>
+      </button>
+      <p>This demo does not accept orders or payments.</p>
+    </div>
+  </aside>
 
-
-    <footer>
-        <h3>🧴 TraNhaHout</h3>
-        <p>One Product • Five Uses</p>
-        <p>© 2026 TNH Store</p>
-    </footer>
-
-
-    <script src="inde23x.js"></script>
-
+  <!-- Toast notification -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 </body>
 </html>
