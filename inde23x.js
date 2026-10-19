@@ -1,12 +1,9 @@
 
-/* =========================================
-   TNH 5-IN-1 CONCEPT WEBSITE
-   File: app.js
-   ========================================= */
+
 
 "use strict";
 
-/* 1. Select HTML elements */
+
 const menuToggle = document.getElementById("menuToggle");
 const mainNav = document.getElementById("mainNav");
 
@@ -38,12 +35,10 @@ const product = {
   price: 12.00
 };
 
-/* 3. Cart state
-   Quantity is stored in memory while the page is open. */
+
 let cartQuantity = 0;
 let toastTimeout;
 
-/* 4. Small utility functions */
 function formatMoney(amount) {
   return new Intl.NumberFormat("en-US", {
     style: "currency",
@@ -64,7 +59,7 @@ function showToast(message) {
   }, 2800);
 }
 
-/* 5. Mobile navigation */
+
 function closeMobileMenu() {
   if (!menuToggle || !mainNav) return;
 
@@ -84,12 +79,12 @@ if (menuToggle && mainNav) {
     );
   });
 
-  // Close the menu when someone selects a navigation link.
+
   mainNav.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", closeMobileMenu);
   });
 
-  // Escape closes the menu on small screens.
+
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
       closeMobileMenu();
@@ -97,7 +92,7 @@ if (menuToggle && mainNav) {
   });
 }
 
-/* 6. Highlight the navigation link for the visible section */
+
 const observedSections = document.querySelectorAll(
   "main section[id]"
 );
@@ -132,7 +127,6 @@ if ("IntersectionObserver" in window && observedSections.length > 0) {
   });
 }
 
-/* 7. Open and close the shopping cart */
 function openCart() {
   if (!cartDrawer || !cartOverlay) return;
 
@@ -178,7 +172,7 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
-/* 8. Add the demonstration product to the cart */
+
 if (addToCartButton) {
   addToCartButton.addEventListener("click", () => {
     cartQuantity += 1;
@@ -189,7 +183,7 @@ if (addToCartButton) {
   });
 }
 
-/* 9. Change the quantity */
+
 function changeQuantity(amount) {
   cartQuantity += amount;
 
@@ -201,7 +195,7 @@ function changeQuantity(amount) {
   updateCart();
 }
 
-/* 10. Render the cart from its current state */
+
 function updateCart() {
   if (
     !cartCountElement ||
@@ -229,7 +223,7 @@ function updateCart() {
     return;
   }
 
-  // Product text comes from the fixed product object above.
+
   cartItemsElement.innerHTML = `
     <article class="cart-item">
       <div class="cart-product-art" aria-hidden="true">TNH<br />5 IN 1</div>
