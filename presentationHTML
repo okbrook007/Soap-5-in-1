@@ -1,1 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 in 1 Shampoo Store</title>
 
+    <link rel="stylesheet" href="presentation_week9.css">
+</head>
+
+<body>
+
+   
+    <nav>
+        <h2>🧴 TraNhaHout (TNH)</h2>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#uses">Uses</a>
+            <a href="#product">Product</a>
+            <button onclick="openCart()">🛒 Cart (<span id="cartCount">0</span>)</button>
+        </div>
+    </nav>
+
+
+
+    <section id="home" class="hero">
+
+        <div class="hero-text">
+            <h1>5 in 1 Shampoo</h1>
+
+            <p>
+                One bottle. Five different cleaning uses.
+            </p>
+
+            <h2>$6.70</h2>
+
+            <button class="buy-button" onclick="addToCart()">
+                Buy Now
+            </button>
+        </div>
+
+        <div class="product-picture">
+            🧴
+        </div>
+
+    </section>
+
+
+
+    <section id="uses">
+
+        <h2 class="section-title">5 Uses in 1 Product</h2>
+
+        <div class="uses-container">
+
+            <div class="use-card">
+                <div class="icon">💇</div>
+                <h3>Hair</h3>
+                <p>For washing hair.</p>
+            </div>
+
+            <div class="use-card">
+                <div class="icon">🚿</div>
+                <h3>Body</h3>
+                <p>For washing the body.</p>
+            </div>
+
+            <div class="use-card">
+                <div class="icon">🦷</div>
+                <h3>Teeth</h3>
+                <p>For teeth cleaning.</p>
+            </div>
+
+            <div class="use-card">
+                <div class="icon">👕</div>
+                <h3>Clothes</h3>
+                <p>For washing clothes.</p>
+            </div>
+
+            <div class="use-card">
+                <div class="icon">🍽️</div>
+                <h3>Dishes</h3>
+                <p>For washing dishes.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+  
+    <section id="product" class="product-section">
+
+        <h2>Our Product</h2>
+
+        <div class="product-box">
+
+            <div class="big-bottle">
+                🧴
+            </div>
+
+            <div class="product-info">
+
+                <h1>TNH 5-in-1 Shampoo</h1>
+
+                <p>
+                    The ultimate 5-in-1 cleaning solution.
+                </p>
+
+                <h2>$6.70</h2>
+
+                <button class="buy-button" onclick="addToCart()">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <div id="cartBox" class="popup">
+
+        <div class="popup-content">
+
+            <span class="close" onclick="closeCart()">×</span>
+
+            <h2>🛒 Your Cart</h2>
+
+            <div id="cartItems">
+                Your cart is empty.
+            </div>
+
+            <h3>
+                Total: $<span id="total">0.00</span>
+            </h3>
+
+            <button class="checkout-button" onclick="checkout()">
+                Checkout
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <footer>
+        <h3>🧴 TraNhaHout</h3>
+        <p>One Product • Five Uses</p>
+        <p>© 2026 TNH Store</p>
+    </footer>
+
+
+    <script src="presentation_week9.js"></script>
+
+</body>
+</html>
